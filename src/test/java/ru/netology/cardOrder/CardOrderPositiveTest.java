@@ -21,7 +21,7 @@ public class CardOrderPositiveTest {
     }
 
     @BeforeEach
-    public void befreEach() {
+    public void beforeEach() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
@@ -39,13 +39,14 @@ public class CardOrderPositiveTest {
 
     @Test
     public void successfulCompletionOfTheForm() {
-        driver.findElement(By.cssSelector("[data-test-id-name] input")).sendKeys("Петров Федор");
-        driver.findElement(By.cssSelector("[data-test-id-phone] input")).sendKeys("+79998887766");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Петров Иван");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79998887766");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
-        driver.findElement(By.cssSelector("button.button")).click();
-        var actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
+        driver.findElement(By.cssSelector("button")).click();
 
+        String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
+        String actual = driver.findElement(By.cssSelector("[data-test-id]")).getText().trim();
 
+        assertEquals(expected, actual);
     }
 }
