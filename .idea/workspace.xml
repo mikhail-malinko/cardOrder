@@ -41,7 +41,7 @@
       <recent name="D:\Automation\cardOrder\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CardOrderPositiveTest">
+  <component name="RunManager" selected="Gradle.CardOrderPositiveTest.successfulCompletionOfTheForm">
     <configuration name="CardOrderPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -90,8 +90,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CardOrderPositiveTest" />
         <item itemvalue="Gradle.CardOrderPositiveTest.successfulCompletionOfTheForm" />
+        <item itemvalue="Gradle.CardOrderPositiveTest" />
       </list>
     </recent_temporary>
   </component>
